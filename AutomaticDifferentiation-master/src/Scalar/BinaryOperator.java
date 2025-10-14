@@ -1,3 +1,5 @@
+package scalar;
+
 public abstract class BinaryOperator extends Function{
     protected Function left;
     protected Function right;

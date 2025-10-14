@@ -1,3 +1,5 @@
+package scalar;
+
 public class Cos extends Function {
     private Function func;
 

@@ -1,3 +1,5 @@
+package scalar;
+
 public class Constant extends Function{
     private double value;
 

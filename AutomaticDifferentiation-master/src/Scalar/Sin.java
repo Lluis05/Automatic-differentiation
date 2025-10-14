@@ -1,3 +1,5 @@
+package scalar;
+
 public class Sin extends Function {
     private Function func;
 

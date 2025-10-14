@@ -1,3 +1,5 @@
+package scalar;
+
 public class X extends Function {
     public X() {
         // void

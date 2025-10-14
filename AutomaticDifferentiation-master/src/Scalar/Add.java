@@ -1,3 +1,5 @@
+package scalar;
+
 public class Add extends BinaryOperator {
     public Add(Function left, Function right) {
         super(left, right);

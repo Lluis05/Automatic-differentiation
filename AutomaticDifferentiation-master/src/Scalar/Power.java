@@ -1,3 +1,5 @@
+package scalar;
+
 public class Power extends Function {
     private Function func;
     private double exponent;

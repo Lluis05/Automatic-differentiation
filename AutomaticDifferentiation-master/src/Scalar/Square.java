@@ -1,3 +1,5 @@
+package scalar;
+
 public class Square extends Function {
 
     private Function function;

@@ -1,3 +1,5 @@
+package scalar;
+
 public class DualNumber {
     public double u; //Value
     public double uprime; //Derivate

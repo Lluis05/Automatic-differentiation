@@ -1,3 +1,5 @@
+package scalar;
+
 public class Multiply extends BinaryOperator {
     public Multiply(Function func1, Function func2) {
         super(func1, func2);
