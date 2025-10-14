@@ -1,6 +1,6 @@
 package scalar;
 
-public class Constant extends Function{
+public class Constant implements Function{
     private double value;
 
     public Constant(double value) {

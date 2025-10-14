@@ -1,6 +1,6 @@
 package scalar;
 
-public class Sin extends Function {
+public class Sin implements Function {
     private Function func;
 
     public Sin(Function func) {

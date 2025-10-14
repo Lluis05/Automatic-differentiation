@@ -1,6 +1,6 @@
 package scalar;
 
-public class Power extends Function {
+public class Power implements Function {
     private Function func;
     private double exponent;
 

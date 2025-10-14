@@ -1,4 +1,4 @@
-package scalar;
+package vectorial;
 
 public abstract class BinaryOperator implements Function{
     protected Function left;

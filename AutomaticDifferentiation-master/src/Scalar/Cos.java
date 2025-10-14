@@ -1,6 +1,6 @@
 package scalar;
 
-public class Cos extends Function {
+public class Cos implements Function {
     private Function func;
 
     public Cos(Function func) {

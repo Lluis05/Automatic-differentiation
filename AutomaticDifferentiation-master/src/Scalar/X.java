@@ -1,6 +1,6 @@
 package scalar;
 
-public class X extends Function {
+public class X implements Function {
     public X() {
         // void
     }

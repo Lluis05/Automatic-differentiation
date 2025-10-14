@@ -1,6 +1,6 @@
 package scalar;
 
-public class Square extends Function {
+public class Square implements Function {
 
     private Function function;
     public Square(Function funct) {
