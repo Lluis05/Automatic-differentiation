@@ -1,0 +1,74 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+interface Function {
+  + evaluate(x: double[]) : DualNumber
+}
+
+class DualNumber {
+  + u : double
+  + uprime : double[]
+  + DualNumber(u: double, uprime: double[])
+}
+
+abstract class BinaryOperator implements Function {
+  # left : Function
+  # right : Function
+  + BinaryOperator(left: Function, right: Function)
+}
+
+class Add extends BinaryOperator {
+  + Add(left: Function, right: Function)
+  + evaluate(x: double[]) : DualNumber
+}
+
+class Multiply extends BinaryOperator {
+  + Multiply(func1: Function, func2: Function)
+  + evaluate(x: double[]) : DualNumber
+}
+
+class Sin implements Function {
+  - func : Function
+  + Sin(func: Function)
+  + evaluate(x: double[]) : DualNumber
+}
+
+class Cos implements Function {
+  - func : Function
+  + Cos(func: Function)
+  + evaluate(x: double[]) : DualNumber
+}
+
+class Power implements Function{
+  - func : Function
+  - exponent : double
+  + Power(func: Function, exponent: double)
+  + evaluate(x: double[]) : DualNumber
+}
+
+class Square implements Function {
+  - func : Function
+  + Square(func: Function)
+  + evaluate(x: double[]) : DualNumber
+}
+
+class Constant implements Function {
+  - value : double
+  - numDimensions : int
+  + Constant(value: double, numDimensions: int)
+  + evaluate(x: double[]) : DualNumber
+}
+
+class Subscript implements Function {
+  - index : int
+  - numDimensions : int
+  + Subscript(index: int, numDimensions: int)
+  + evaluate(x: double[]) : DualNumber
+}
+
+class Main {
+  {static} main(args: String[])
+}
+
+
+@enduml

@@ -2,14 +2,14 @@ package vectorial;
 
 public class Square implements Function {
 
-    private Function function;
-    public Square(Function funct) {
-        this.function = funct;
+    private Function func;
+    public Square(Function func) {
+        this.func = func;
     }
 
     @Override
     public DualNumber evaluate(double[] x) {
-        DualNumber value = function.evaluate(x);
+        DualNumber value = func.evaluate(x);
 
         int n = value.uprime.length;
         double[] uprime = new double[n];
