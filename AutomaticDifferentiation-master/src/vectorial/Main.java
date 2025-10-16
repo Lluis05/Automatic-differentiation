@@ -42,9 +42,12 @@ public class Main {
             if (t > 0) sb.append(", ");
             sb.append(p[0]).append(", ").append(p[1]).append(", ").append(result.u);
 
-            // Actualización: p := p - h * grad
+            // Descendant
             p[0] -= h * result.uprime[0];
             p[1] -= h * result.uprime[1];
+            // Ascendant
+            //p[0] += h * result.uprime[0];
+            //p[1] += h * result.uprime[1];
         }
 
         sb.append("]");
