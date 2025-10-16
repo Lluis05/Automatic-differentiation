@@ -43,11 +43,11 @@ public class Main {
             sb.append(p[0]).append(", ").append(p[1]).append(", ").append(result.u);
 
             // Descendant
-            p[0] -= h * result.uprime[0];
-            p[1] -= h * result.uprime[1];
+            //p[0] -= h * result.uprime[0];
+            //p[1] -= h * result.uprime[1];
             // Ascendant
-            //p[0] += h * result.uprime[0];
-            //p[1] += h * result.uprime[1];
+            p[0] += h * result.uprime[0];
+            p[1] += h * result.uprime[1];
         }
 
         sb.append("]");
