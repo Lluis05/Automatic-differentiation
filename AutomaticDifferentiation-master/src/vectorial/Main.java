@@ -2,11 +2,13 @@ package vectorial;
 
 public class Main {
     public static void main(String[] args) {
-        Function x1 = new Subscript(1, 2); // 2 is number of dimensions
+        Function x1 = new Subscript(1, 2);
         Function x2 = new Subscript(2, 2);
         Function gamma = new Constant(0.5, 2);
         Function func = new Add(new Multiply(x1, x1), new Multiply(gamma, new Multiply(x2, x2)));
-        /* Rosenbrock function
+
+        /*
+        //Rosenbrock function
         Function x1 = new Subscript(1, 2);
         Function x2 = new Subscript(2, 2);
         Function gamma = new Constant(1, 2);
@@ -25,7 +27,8 @@ public class Main {
                         )
                 )
         );
-         */
+        */
+
 
         double p[] = new double[] {-0.75, -0.5};
 
@@ -43,11 +46,11 @@ public class Main {
             sb.append(p[0]).append(", ").append(p[1]).append(", ").append(result.u);
 
             // Descendant
-            //p[0] -= h * result.uprime[0];
-            //p[1] -= h * result.uprime[1];
+            p[0] -= h * result.uprime[0];
+            p[1] -= h * result.uprime[1];
             // Ascendant
-            p[0] += h * result.uprime[0];
-            p[1] += h * result.uprime[1];
+            //p[0] += h * result.uprime[0];
+            //p[1] += h * result.uprime[1];
         }
 
         sb.append("]");
