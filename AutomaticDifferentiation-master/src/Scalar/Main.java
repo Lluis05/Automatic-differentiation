@@ -11,14 +11,14 @@ public class Main{
 
         double x0 = 4.0;
 
-        // Valores "True" (analíticos)
+        // Valores "True"
         double fTrue = Math.sin(Math.PI / 2.0 + x0 * x0);
         double fPrimeTrue = 2.0 * x0 * Math.cos(Math.PI / 2.0 + x0 * x0);
 
-        // Valores "Computed" (automática) usando dual numbers
+        // Valores "Computed"
         DualNumber res = f.evaluate(new DualNumber(x0, 1.0));
 
-        // Encabezado como en la diapositiva
+
         System.out.println("sin(pi/2 + x^2), x0 = " + x0);
 
         System.out.println("True");
